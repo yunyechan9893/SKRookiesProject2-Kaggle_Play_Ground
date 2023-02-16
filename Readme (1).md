@@ -222,7 +222,7 @@
 	- 연속형 데이터이므로 **피처 스케일링**을 진행한다
 
 
-<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219270794-51a44109-df2e-47d7-acba-21539772f458.PNG">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219270794-51a44109-df2e-47d7-acba-21539772f458.PNG">
 
 -  BMI와  뇌졸중 관계
 	- 축을 바꿔보니 양의 기울기를 갖는 선형 그래프가 그려진다
@@ -235,10 +235,6 @@
 	- BMI가 18.5 이하면 저체중(0) ／ 18.5 ~ 22.9 사이면 정상(1) ／ 23.0 ~ 24.9 사이면 과체중(2) ／ 25.0 이상부터는 비만으로 판정(3)
 	- 과체중으로 갈수록 뇌졸중 확률이 증가한다
 
-
-<img width="450 alt="image" src="https://user-images.githubusercontent.com/120996995/219270805-45419d2d-8abe-44bf-bbe7-5c6c2b9450bc.PNG">
-
-- BMI와 뇌졸중과의 관계 3
 
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219270807-f4788e97-9e79-4460-981f-b09d27c59eea.png">
 
