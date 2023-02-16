@@ -40,8 +40,7 @@
 	-   즉, Cohen Kappa Metric은 우연히 분류가 일치할 가능성을 보정 함으로써 분류정확도를 측정한 것이며, 그 값은 (실제 분류정확도-우연에 의해 기대되는 분류정확도) 로 주어진다
 	-   분류 범주가 순서화 되어 있을 때, 오분류 결과를 그 정도에 따라 오류를 정량화하여 분류정확도를 측정하는데 사용된다
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964640-d5dc672a-349f-46bd-ad7a-178e08967470.png
-">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964640-d5dc672a-349f-46bd-ad7a-178e08967470.png">
 
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964675-fa8d35e2-4ba8-4994-b9ca-f741584afc64.png">
 
@@ -54,38 +53,38 @@
 	-   추가로 다운받은 데이터에 기존 train 데이터와 중복되는 데이터가 존재한다 → 중복값을 제거하지 않으면 중복값 학습시 해당 정보가 가중되어 과적합의 우려가 있다
 
 ## 시각화
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964684-fb0c5a7b-70d5-44fc-b45d-ec6f4cc5b404.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964684-fb0c5a7b-70d5-44fc-b45d-ec6f4cc5b404.png">
 
 - 불균형한 타겟 분포
 - 타겟 분포가 상당히 불균형하다 (타겟이 3, 4, 8)인 데이터가 현저히 적다
 -   따라서 이를 완화해 주기 위해 Stratified Cross-validation / Class Weighting 등을 사용할 수 있다
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964650-91761117-28bf-4775-b70e-1607772478f0.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964650-91761117-28bf-4775-b70e-1607772478f0.png">
 -   비대칭도가 -1 ~ 1 사이 : 정규분포에 가까움 (초록색)
 -   비대칭도가 1보다 큼 : 높은 양의 비대칭도 (빨간색)
 -   비대칭도가 -1보다 작음 : 높은 음의 비대칭도 (빨간색)
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964671-5a85c840-47e8-45e4-96cb-3be700384fe8.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964671-5a85c840-47e8-45e4-96cb-3be700384fe8.png">
 -   첨도가 -3 ~ 3 사이 : 정규분포에 가까움 (초록색)
 -   첨도가 3보다 큼 : 높은 양의 첨도 (빨간색)
 -   첨도가 -3보다 작음 : 높은 음의 첨도 (빨간색)
 -   비대칭도와 첨도를 종합적으로 봤을 때 'sulphates', 'residual sugar', 'chlorides' 3개 피처가 비정상적 분포를 지님 → Quantile Transtorm을 활용한 정규분포화
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964662-28ead60d-6424-43bc-bdbf-4138d3b932b8.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964662-28ead60d-6424-43bc-bdbf-4138d3b932b8.png">
 - log, boxcox, square root, quatile scaling을 활용한 transforming
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964693-0b65b039-fc70-4a42-85cb-7e72862e2234.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964693-0b65b039-fc70-4a42-85cb-7e72862e2234.png">
 
 - test 데이터와 train 데이터 간 분포는 유사한 경향
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964653-fe724834-a6b6-4ad7-8a69-a4f19a1f3dad.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964653-fe724834-a6b6-4ad7-8a69-a4f19a1f3dad.png">
 
 - 피처들간 상관관계가 높지 않다
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964694-ad89fe86-f802-4748-8964-a54625d9e5b9.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964694-ad89fe86-f802-4748-8964-a54625d9e5b9.png">
 
 - alcohol, sulphates가 피처 중요도가 높다
 
 
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964637-7018d6e4-fd59-4849-b9bd-720946ba9d8c.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964637-7018d6e4-fd59-4849-b9bd-720946ba9d8c.png">
 
 -   z-score 확인
 	-   z-score : 값들이 평균으로부터 얼마나 떨어져있는지(표준편차의 몇 배만큼 멀리 있는지) 알려주는 지표
@@ -93,13 +92,13 @@
 		-   음의 z-score : 측정값이 평균보다 낮음
 		-   z-score > 3 or z-score < -3 : 이상치일 가능성이 높음
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218969820-e4be9283-9819-4179-ad95-b5aa8a014de4.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218969820-e4be9283-9819-4179-ad95-b5aa8a014de4.png">
 
 -   Robust Scaling 활용
 -   이상치를 제거하지 않고 이상치를 포함하여 정규 분포화 시키는 작업을 하기 때문에 Standard Scaling 보다는 Robust Scaling을 활용한다
 - 이상치가 정규분포에 가깝게 눌러진 모습
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964646-30f18ff5-3014-4b27-a011-e184ac4e9aa2.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964646-30f18ff5-3014-4b27-a011-e184ac4e9aa2.png">
 
 - 비대칭 완화(Quantile Scaling 활용)
 - 확실히 치우쳐져 있던 피처들의 분포가 정규분포화 되었음
@@ -116,8 +115,8 @@
 
 
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964680-c2f69d3f-f6a6-4c12-ace8-a710da77d153.png ">
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218970672-cc48e59c-fa22-45cd-9294-98b4c8882cef.PNG ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218964680-c2f69d3f-f6a6-4c12-ace8-a710da77d153.png">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218970672-cc48e59c-fa22-45cd-9294-98b4c8882cef.PNG">
 
 -   최적 Cluster 수 : 3 / 최적 PCA 수 : 2
 
@@ -212,7 +211,7 @@
 
 
 ## 분석
-<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219270796-20324d84-b738-4401-abe4-60d833524506.PNG ">
+<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219270796-20324d84-b738-4401-abe4-60d833524506.PNG">
 - 나이 데이터 밀도와 분포도
 	- 나이는 이상치 없이 고루 잘 분포되어 있다
 
@@ -230,7 +229,7 @@
 	- BMI수치가 올라갈수록 뇌졸중 확률이 증가한다
 	- 연속형 데이터 이므로 **Standard Scaler** 사용하여 학습한다
 
-<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219270804-a6e72312-654d-471f-aefc-6f29348b1415.PNG ">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219270804-a6e72312-654d-471f-aefc-6f29348b1415.PNG">
 
 - BMI와 뇌졸중과의 관계 2
 	- BMI가 18.5 이하면 저체중(0) ／ 18.5 ~ 22.9 사이면 정상(1) ／ 23.0 ~ 24.9 사이면 과체중(2) ／ 25.0 이상부터는 비만으로 판정(3)
@@ -241,7 +240,7 @@
 
 - BMI와 뇌졸중과의 관계 3
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219270807-f4788e97-9e79-4460-981f-b09d27c59eea.png ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219270807-f4788e97-9e79-4460-981f-b09d27c59eea.png">
 
 - 평균혈당과  뇌졸중 관계
 	- 혈당이 높아질수록 뇌졸중 확률이 증가한다
@@ -249,7 +248,7 @@
 
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219252967-9cfe7677-8de1-400e-a0a9-839a8b23b80c.PNG">
 																											 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219252972-d856ed2e-395c-4d21-902b-98e68bee96f6.PNG ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219252972-d856ed2e-395c-4d21-902b-98e68bee96f6.PNG">
 
 - 성별과 뇌졸중의 관계
 	- 남성이 여성보다 뇌졸중 확률이 높다
@@ -280,7 +279,7 @@
 	 - 주거 형태에 따른 정답의 비율의 차이가 거의 보이지 않는다.
 	 - 시골과 도시에 차이는 없어 보인다. 그러므로 피처 제거를 하도록 하겠다.
 	 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962878-c44c2933-0148-4625-8ba1-530a3e199918.PNG ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962878-c44c2933-0148-4625-8ba1-530a3e199918.PNG">
 - 담배와  뇌졸중 관계
 	- 이전에 담배를 피웠었던 사람이 뇌졸중에 걸릴 확률이 높아진다
 
