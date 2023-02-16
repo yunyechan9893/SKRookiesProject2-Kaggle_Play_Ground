@@ -240,15 +240,15 @@
 
 - BMI와 뇌졸중과의 관계 3
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219270807-f4788e97-9e79-4460-981f-b09d27c59eea.png">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219270807-f4788e97-9e79-4460-981f-b09d27c59eea.png">
 
 - 평균혈당과  뇌졸중 관계
 	- 혈당이 높아질수록 뇌졸중 확률이 증가한다
 	- 연속형 데이터 이므로 스케일러를 사용하여 학습한다
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219252967-9cfe7677-8de1-400e-a0a9-839a8b23b80c.PNG">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219252967-9cfe7677-8de1-400e-a0a9-839a8b23b80c.PNG">
 																											 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219252972-d856ed2e-395c-4d21-902b-98e68bee96f6.PNG">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219252972-d856ed2e-395c-4d21-902b-98e68bee96f6.PNG">
 
 - 성별과 뇌졸중의 관계
 	- 남성이 여성보다 뇌졸중 확률이 높다
@@ -256,25 +256,25 @@
 		 - 이상치로 판단하고 최빈값으로 대체
 										
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219252967-9cfe7677-8de1-400e-a0a9-839a8b23b80c.PNG">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219252967-9cfe7677-8de1-400e-a0a9-839a8b23b80c.PNG">
 
 - 심장병과 뇌졸중의 관계
 	- 심장병이 있는 환자일수록 뇌졸중 걸릴 확률이 증가한다	 
 																 
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219266341-e756edc1-dc36-4e45-912b-d3252cb8e03a.PNG">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219266341-e756edc1-dc36-4e45-912b-d3252cb8e03a.PNG">
 
 -  결혼과 뇌졸중의 관계
 	- 결혼을 한 사람일수록 뇌졸중 확률이 올라간다.
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219266334-186bb484-c726-4cb4-96d7-c48974aa65f4.PNG">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219266334-186bb484-c726-4cb4-96d7-c48974aa65f4.PNG">
 
 - 일타입과 뇌졸중과의 관계
 	- 자영업자가 뇌졸중 확률이 제일 높다
 	- 무직인 경우 뇌졸중 확률이 없다
 
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219266337-155f8c27-70ec-4eb5-ba8b-3722fbe5afc3.PNG">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219266337-155f8c27-70ec-4eb5-ba8b-3722fbe5afc3.PNG">
 - 주거 환경에 따른 뇌졸중 관계
 	 - 주거 형태에 따른 정답의 비율의 차이가 거의 보이지 않는다.
 	 - 시골과 도시에 차이는 없어 보인다. 그러므로 피처 제거를 하도록 하겠다.
