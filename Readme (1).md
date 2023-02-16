@@ -11,13 +11,10 @@
 -   residual sugar(잔당) : residual sugar은 포도주 양조 과정 후에 와인에 남아 있는 발효되지 않은 설탕의 양. 와인의 당도에 영향을 미치며 residual sugar가 높으면 더 달콤한 와인이 되고 낮으면 드라이한 와인이 됨
     
 -   chlorides(염화물) : 와인의 짠맛의 원인이며 신맛에도 영향을 미침
-    
 
-  
-
--   free sulfur dioxid(유리 이산화황) : 유리 이산화황은 방부제 역할을 하는 유황 화합물의 일종으로 와인이 부패하고 산화되는 것을 방지.이산화황이 너무 많으면 와인에 불쾌하고 쓴 맛이 날 수 있으며, 너무 적으면 부패하고 이취가 남.
+-   free sulfur dioxid(유리 이산화황) : 유리 이산화황은 방부제 역할을 하는 유황 화합물의 일종으로 와인이 부패하고 산화되는 것을 방지. 이산화황이 너무 많으면 와인에 불쾌하고 쓴 맛이 날 수 있으며, 너무 적으면 부패하고 이취가 남.
     
--   total sulfur dioxide(총 이산화황) : 와인의 총 이산화황은 와인 보존에 중요한 요소이지만 높은 수준은 와인의 풍미와 향에 영향
+-   total sulfur dioxide(총 이산화황) : 와인의 총이산화황은 와인 보존에 중요한 요소이지만 높은 수준은 와인의 풍미와 향에 영향
     
 -   density(밀도) : 부피 대비 와인의 무게. 와인의 알코올 함량을 결정하는 데 사용할 수 있으며 밀도가 높을수록 알코올 함량이 높음
     
@@ -30,6 +27,8 @@
 	-   Quality : 퀄리티의 값은 연속수가 아닌 3 ~ 8의 정수
     
 	-   피쳐 데이터는 모두 연속형 데이터이지만, 타겟 데이터 값을 보면 다중 분류 문제의 형식
+
+
 ### 평가지표
 -   Quadratic Weighted Kappa Metric
 	-   실제값과 예측값 간의 측정 범주 값에 대한 일치도를 측정
@@ -173,13 +172,13 @@
 	- hypertension: 고윳값 0, 1
 	- heart_disease: 고윳값 0, 1
 	- ever_married: 고윳값 Yes, No
-	- Residence_type : 고윳값 -> 제거 후보 피처
+	- Residence_type : 고윳값 -> 제거 피처
 		- Urban: 도심값
 		- Rural: 시골
 - 명목형 피처
 	- gender: 고윳값 Male, Female, Other
 		- 일반적으로 성별의 경우 Male, Female 두 가지인데, Other라는 성별이 하나 추가되었다.
-		- 따라서 해당 Value에 대해 분석하여 이상치일 경우 제거해야 한다.
+		- 따라서 해당 Value에 대해 분석하여 이상치일 경우 제거
 	- work_type: 고윳값 5개
 		- Private: 회사원
 		- Self-employed: 자영업
@@ -247,7 +246,7 @@
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219252972-d856ed2e-395c-4d21-902b-98e68bee96f6.PNG">
 
 - 성별과 뇌졸중의 관계
-	- 남성이 여성보다 뇌졸중 확률이 높다
+	- 남성이 여성보다 뇌졸중 확률이 높다.
 	- 세 개의 성별 중, Other은 하나로 학습에 영향을 거의 주지 않을 것으로 예상된다. 
 		 - 이상치로 판단하고 최빈값으로 대체
 										
@@ -255,7 +254,7 @@
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219252967-9cfe7677-8de1-400e-a0a9-839a8b23b80c.PNG">
 
 - 심장병과 뇌졸중의 관계
-	- 심장병이 있는 환자일수록 뇌졸중 걸릴 확률이 증가한다	 
+	- 심장병이 있는 환자일수록 뇌졸중 걸릴 확률이 증가한다.
 																 
 
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219266341-e756edc1-dc36-4e45-912b-d3252cb8e03a.PNG">
@@ -266,8 +265,8 @@
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219266334-186bb484-c726-4cb4-96d7-c48974aa65f4.PNG">
 
 - 일타입과 뇌졸중과의 관계
-	- 자영업자가 뇌졸중 확률이 제일 높다
-	- 무직인 경우 뇌졸중 확률이 없다
+	- 자영업자가 뇌졸중 확률이 제일 높다.
+	- 무직인 경우 뇌졸중 확률이 없다.
 
 
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219266337-155f8c27-70ec-4eb5-ba8b-3722fbe5afc3.PNG">
@@ -279,18 +278,20 @@
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962878-c44c2933-0148-4625-8ba1-530a3e199918.PNG">
 
 - 담배와  뇌졸중 관계
-	- 이전에 담배를 피웠었던 사람이 뇌졸중에 걸릴 확률이 높아진다
+	- 이전에 담배를 피웠었던 사람이 뇌졸중에 걸릴 확률이 높아진다.
 
 
 
 ## EDA결과
 ###  범주형 피처
 - 'gender'-> 원-핫 인코딩한다.
-- 'work_type'-> 원-핫 인코딩한다.								- 'smoking_status'-> 원-핫 인코딩한다.			  
+- 'work_type'-> 원-핫 인코딩한다.			- 
+- 'smoking_status'-> 원-핫 인코딩한다.			  
 - 'hypertension'-> 1, 0로 인코딩한다.
 - 'heart_disease'-> 1, 0로 인코딩한다.
 - 'ever_married'-> 1, 0로 인코딩한다.
 - 'Residence_type' -> 제거한다.
+- 
 ### 수치형 피처
 - 'age'-> MinMaxScaler 사용한다.
 - 'avg_glucose_level' -> standardScaler 사용한다.
@@ -306,7 +307,7 @@
 ### 하이퍼 파라미터 튜닝
 - GridSearchCV, Bayesian Optimization 활용
 	- GridSearchCV와 Bayesian Optimization를 활용하여 찾은 파라미터에서 직접 세부 조정을 통해 성능을 극한으로 끌어올림
-- public = 0.87432, private = 0.89959
+- public = 0.87380, private = 0.89962
 - **6등** // BEST SCORE
 
 																	  
