@@ -205,29 +205,43 @@
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962858-c76c0a03-b63b-44e9-9d9f-ba30cb7f7e73.PNG">
 
 <img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/218962888-70a76ab3-aa0b-4746-8007-23cb7ad37430.PNG">
+
 - 나이와  뇌졸중 관계
 	- 나이가 들수록 뇌졸중 확률이 올라간다
 	- 연속형 데이터이므로 **피처 스케일링**을 진행한다
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962892-a86b3060-657d-4425-9b8a-0f58f675afdc.PNG ">
-- bmi와  뇌졸중 관계
-	- 그래프가 시각적으로 보기 힘들다
-	- 다른 그래프로 그려보자
 <img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219267230-fc168266-59b6-43e3-914e-f0d3aa4d21b9.PNG">
+
 -  bmi와  뇌졸중 관계2 
 	- 축을 바꿔보니 양의 기울기를 갖는 선형 그래프가 그려진다
 	- bmi수치가 올라갈수록 뇌졸중 확률이 증가한다
 	- 연속형 데이터 이므로 Standard Scaler 사용하여 학습한다
+
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219268503-e51706a7-ce62-44d8-b445-0afe2f7b4daf.PNG ">
 
 - bmi와 뇌졸중과의 관계3
 	- BMI가 18.5 이하면 저체중(0) ／ 18.5 ~ 22.9 사이면 정상(1) ／ 23.0 ~ 24.9 사이면 과체중(2) ／ 25.0 이상부터는 비만으로 판정(3)
 	- 과체중으로 갈수록 뇌졸중 확률이 증가한다
+
+
 <img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219268505-dec9b9db-4537-443d-a05b-785003ea3596.PNG">
+
 - bmi와 뇌졸중과의 관계4
 
+<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/218962888-70a76ab3-aa0b-4746-8007-23cb7ad37430.PNG">
 
-<img width="863" alt="image" src=" ">
+- 나이와 뇌졸중과의 관계 
+	- 나이가 들수록 뇌졸중 확률이 올라간다
+	- 연속형 데이터이므로 피처 스케일링을 진행한다
+
+
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962902-cf1cd3ec-680b-4dcc-92a1-02a23bd795a7.PNG ">
+
+- 평균혈당과  뇌졸중 관계
+	- 혈당이 높아질수록 뇌졸중 확률이 증가한다
+	- 연속형 데이터 이므로 스케일러를 사용하여 학습한다
+
+
 <img width="863" alt="image" src=" ">
 
 
@@ -271,7 +285,7 @@
 
 
 
-<img width="863" alt="image" src=" ">
+
 
 <img width="863" alt="image" src=" ">
 
