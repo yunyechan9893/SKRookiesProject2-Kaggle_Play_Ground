@@ -271,11 +271,13 @@
 
 
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219266337-155f8c27-70ec-4eb5-ba8b-3722fbe5afc3.PNG">
+
 - 주거 환경에 따른 뇌졸중 관계
 	 - 주거 형태에 따른 정답의 비율의 차이가 거의 보이지 않는다.
 	 - 시골과 도시에 차이는 없어 보인다. 그러므로 피처 제거를 하도록 하겠다.
 	 
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962878-c44c2933-0148-4625-8ba1-530a3e199918.PNG">
+
 - 담배와  뇌졸중 관계
 	- 이전에 담배를 피웠었던 사람이 뇌졸중에 걸릴 확률이 높아진다
 
