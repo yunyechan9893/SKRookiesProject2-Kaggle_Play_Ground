@@ -211,11 +211,11 @@
 
 
 ## 분석
-<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219270796-20324d84-b738-4401-abe4-60d833524506.PNG">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219270796-20324d84-b738-4401-abe4-60d833524506.PNG">
 - 나이 데이터 밀도와 분포도
 	- 나이는 이상치 없이 고루 잘 분포되어 있다
 
-<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219270783-cc48b0c9-7e95-4286-a766-842ae24a2b70.PNG">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219270783-cc48b0c9-7e95-4286-a766-842ae24a2b70.PNG">
 
 - 나이와  뇌졸중 관계
 	- 나이가 들수록 뇌졸중 확률이 올라간다
@@ -236,7 +236,7 @@
 	- 과체중으로 갈수록 뇌졸중 확률이 증가한다
 
 
-<img width="450 alt="image" src=" https://user-images.githubusercontent.com/120996995/219270805-45419d2d-8abe-44bf-bbe7-5c6c2b9450bc.PNG">
+<img width="450 alt="image" src="https://user-images.githubusercontent.com/120996995/219270805-45419d2d-8abe-44bf-bbe7-5c6c2b9450bc.PNG">
 
 - BMI와 뇌졸중과의 관계 3
 
@@ -262,12 +262,12 @@
 	- 심장병이 있는 환자일수록 뇌졸중 걸릴 확률이 증가한다	 
 																 
 
-<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219266341-e756edc1-dc36-4e45-912b-d3252cb8e03a.PNG">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219266341-e756edc1-dc36-4e45-912b-d3252cb8e03a.PNG">
 
 -  결혼과 뇌졸중의 관계
 	- 결혼을 한 사람일수록 뇌졸중 확률이 올라간다.
 
-<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219266334-186bb484-c726-4cb4-96d7-c48974aa65f4.PNG">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219266334-186bb484-c726-4cb4-96d7-c48974aa65f4.PNG">
 
 - 일타입과 뇌졸중과의 관계
 	- 자영업자가 뇌졸중 확률이 제일 높다
