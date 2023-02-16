@@ -181,6 +181,7 @@
 ### Vxx 피처
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962657-1847ac67-c52f-4b89-baa3-3d01cee94bb7.PNG ">
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962664-13064d6b-84fd-4846-b3e3-8922e506065d.png ">
+
 - 대부분의 피처가  **정규 분포** 의 형태를 띠고 있다.
 - 수치의 분포(주황색 점)는 대역폭에서 크게 벗어나는 **이상치가 거의 없음** 
 	 - 모든 피처 활용
@@ -188,13 +189,17 @@
 
 ### 상관관계 
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962666-8fa4c30d-7cdf-47d4-9b90-0d239d2111e7.png ">
+
 - 각 피처가 **0을 기준으로 분포**하고 있다.
 - 강한 상관관계를 갖는 피처가 없다. 
 	- 모든 피처 사용
 
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962670-cab54619-da1f-4052-93c6-64fe28cb63a9.png ">
+
 - 해당 차트로는 의미있는 데이터 분석이 어렵다. 
+
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962672-5c61b43b-bebc-4eef-8748-8049baea607e.png ">
+
 - 축변환을 하고 난 후, 의미 있는 데이터 분석이 가능하다고 판단하였다.
 - 타깃값의 확률이 증가할 때 피처 value의 변화가 생긴다면 ->의미 있는 피처
 - 변화가 생기지 않는다면 -> 의미 없는 피처라고 판단하였다.
@@ -203,6 +208,7 @@
 
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962675-d54a0f0f-f97e-4949-b5c8-c04cd40cad5d.png ">
 <img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/218962675-d54a0f0f-f97e-4949-b5c8-c04cd40cad5d.png">
+
 - Time의 경우 Value의 빈도 분포가 대략적으로 정규 분포의 형태를 띠고 있다.
 - Amount의 경우 전체적으로는 매우 넓은 범위에 빈도가 분포하고 있지만, 0에 가까운 지점에서 많은 value가 찍힌 것으로 보인다.
 	- 따라서 두 피처의 **커널 밀도 시각화**를 진행한다.
