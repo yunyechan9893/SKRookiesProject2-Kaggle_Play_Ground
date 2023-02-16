@@ -159,38 +159,38 @@
 - bmi: 비만도
 - smoking_status: 흡연 여부
 - stroke: 뇌졸중(정답, 타깃)
-- 
+
 ## 평가지표
 -  area under the ROC curve 
 
 ## EDA
 ### 데이터 분석
 - 이진형 피처
-	- hypertension: 고유값 0, 1
-	- heart_disease: 고유값 0, 1
-	- ever_married: 고유값 Yes, No
-	- Residence_type : 고유값 -> 제거 후보 피처
+	- hypertension: 고윳값 0, 1
+	- heart_disease: 고윳값 0, 1
+	- ever_married: 고윳값 Yes, No
+	- Residence_type : 고윳값 -> 제거 후보 피처
 		- Urban: 도심값
 		- Rural: 시골
 - 명목형 피처
-	- gender : 고유값 Male, Female, Other
-		- 일반적으로 성별의 경우 Male, Female 두 가지인데, Other 이라는 성별이 하나 추가되었다.
+	- gender: 고윳값 Male, Female, Other
+		- 일반적으로 성별의 경우 Male, Female 두 가지인데, Other라는 성별이 하나 추가되었다.
 		- 따라서 해당 Value에 대해 분석하여 이상치일 경우 제거해야 한다.
-	- work_type: 고유값 5개
-		- Private : 회사원
-		- Self-employed' : 자영업
-		- Govt_job : 공무원
-		- children : 학생
-		- Never_worked : 무직
-		-명목형 피처의 값들이 학습에 도움이 되는지 시각화를 통해 확인하고 불필요한 값이 있다면 제거한 후, **One-Hot인코딩** 진행
+	- work_type: 고윳값 5개
+		- Private: 회사원
+		- Self-employed: 자영업
+		- Govt_job: 공무원
+		- children: 학생
+		- Never_worked: 무직
+		- 명목형 피처의 값들이 학습에 도움이 되는지 시각화를 통해 확인하고 불필요한 값이 있다면 제거한 후, **One-Hot인코딩** 진행
 
 	- smoking_status
-		- 고유값 4개
-		- never smoked : 흡연 경험이 없는 사람
-		- formerly smoked : 흡연을 했었던 사람
-		- Unknown : Unknown
+		- 고윳값 4개
+		- never smoked: 흡연 경험이 없는 사람
+		- formerly smoked: 흡연을 했었던 사람
+		- Unknown: Unknown
 			- 이상치일 확률이 높기 때문에 데이터 처리 방식에 대해 고려한다. -> 포함해서 진행
-		- smokes : 흡연을 하는 사람
+		- smokes: 흡연을 하는 사람
 
 - 수치형 피처
 	- Age
@@ -202,68 +202,66 @@
 
 ### 정답 (stroke) 비율
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962858-c76c0a03-b63b-44e9-9d9f-ba30cb7f7e73.PNG">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219270811-29ddbe9a-c04b-416a-bc7e-790a91e33034.PNG">
 
-<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/218962888-70a76ab3-aa0b-4746-8007-23cb7ad37430.PNG">
+
+
+## 분석
+<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219270796-20324d84-b738-4401-abe4-60d833524506.PNG ">
+- 나이 데이터 밀도와 분포도
+	- 나이는 이상치 없이 고루 잘 분포되어 있다
+
+<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219270783-cc48b0c9-7e95-4286-a766-842ae24a2b70.PNG">
 
 - 나이와  뇌졸중 관계
 	- 나이가 들수록 뇌졸중 확률이 올라간다
 	- 연속형 데이터이므로 **피처 스케일링**을 진행한다
 
-<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219267230-fc168266-59b6-43e3-914e-f0d3aa4d21b9.PNG">
 
--  bmi와  뇌졸중 관계2 
+<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219270794-51a44109-df2e-47d7-acba-21539772f458.PNG">
+
+-  BMI와  뇌졸중 관계
 	- 축을 바꿔보니 양의 기울기를 갖는 선형 그래프가 그려진다
-	- bmi수치가 올라갈수록 뇌졸중 확률이 증가한다
-	- 연속형 데이터 이므로 Standard Scaler 사용하여 학습한다
+	- BMI수치가 올라갈수록 뇌졸중 확률이 증가한다
+	- 연속형 데이터 이므로 **Standard Scaler** 사용하여 학습한다
 
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219268503-e51706a7-ce62-44d8-b445-0afe2f7b4daf.PNG ">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/120996995/219270804-a6e72312-654d-471f-aefc-6f29348b1415.PNG ">
 
-- bmi와 뇌졸중과의 관계3
+- BMI와 뇌졸중과의 관계 2
 	- BMI가 18.5 이하면 저체중(0) ／ 18.5 ~ 22.9 사이면 정상(1) ／ 23.0 ~ 24.9 사이면 과체중(2) ／ 25.0 이상부터는 비만으로 판정(3)
 	- 과체중으로 갈수록 뇌졸중 확률이 증가한다
 
 
-<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219268505-dec9b9db-4537-443d-a05b-785003ea3596.PNG">
+<img width="450 alt="image" src=" https://user-images.githubusercontent.com/120996995/219270805-45419d2d-8abe-44bf-bbe7-5c6c2b9450bc.PNG">
 
-- bmi와 뇌졸중과의 관계4
+- BMI와 뇌졸중과의 관계 3
 
-<img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/218962888-70a76ab3-aa0b-4746-8007-23cb7ad37430.PNG">
-
-- 나이와 뇌졸중과의 관계 
-	- 나이가 들수록 뇌졸중 확률이 올라간다
-	- 연속형 데이터이므로 피처 스케일링을 진행한다
-
-
-<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962902-cf1cd3ec-680b-4dcc-92a1-02a23bd795a7.PNG ">
+<img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219270807-f4788e97-9e79-4460-981f-b09d27c59eea.png ">
 
 - 평균혈당과  뇌졸중 관계
 	- 혈당이 높아질수록 뇌졸중 확률이 증가한다
 	- 연속형 데이터 이므로 스케일러를 사용하여 학습한다
 
-
-<img width="863" alt="image" src=" ">
-
-
-### 피처 분석
-
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219252967-9cfe7677-8de1-400e-a0a9-839a8b23b80c.PNG">
+																											 
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219252972-d856ed2e-395c-4d21-902b-98e68bee96f6.PNG ">
 
 - 성별과 뇌졸중의 관계
 	- 남성이 여성보다 뇌졸중 확률이 높다
 	- 세 개의 성별 중, Other은 하나로 학습에 영향을 거의 주지 않을 것으로 예상된다. 
 		 - 이상치로 판단하고 최빈값으로 대체
+										
+
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219252967-9cfe7677-8de1-400e-a0a9-839a8b23b80c.PNG">
 
 - 심장병과 뇌졸중의 관계
-	- 심장병이 있는 환자일수록 뇌졸증 걸릴 확률이 증가한다	 
+	- 심장병이 있는 환자일수록 뇌졸중 걸릴 확률이 증가한다	 
+																 
 
 <img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219266341-e756edc1-dc36-4e45-912b-d3252cb8e03a.PNG">
 
 -  결혼과 뇌졸중의 관계
 	- 결혼을 한 사람일수록 뇌졸중 확률이 올라간다.
-
 
 <img width="863" alt="image" src=" https://user-images.githubusercontent.com/120996995/219266334-186bb484-c726-4cb4-96d7-c48974aa65f4.PNG">
 
@@ -275,7 +273,7 @@
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/219266337-155f8c27-70ec-4eb5-ba8b-3722fbe5afc3.PNG">
 - 주거 환경에 따른 뇌졸중 관계
 	 - 주거 형태에 따른 정답의 비율의 차이가 거의 보이지 않는다.
-	 - 시골과 도시에 차이는 없어보인다. 그러므로 피처 제거를 하도록 하겠다.
+	 - 시골과 도시에 차이는 없어 보인다. 그러므로 피처 제거를 하도록 하겠다.
 	 
 <img width="863" alt="image" src="https://user-images.githubusercontent.com/120996995/218962878-c44c2933-0148-4625-8ba1-530a3e199918.PNG ">
 - 담배와  뇌졸중 관계
@@ -283,19 +281,31 @@
 
 
 
+## EDA결과
+###  범주형 피처
+- 'gender'-> 원-핫 인코딩한다.
+- 'work_type'-> 원-핫 인코딩한다.								- 'smoking_status'-> 원-핫 인코딩한다.			  
+- 'hypertension'-> 1, 0로 인코딩한다.
+- 'heart_disease'-> 1, 0로 인코딩한다.
+- 'ever_married'-> 1, 0로 인코딩한다.
+- 'Residence_type' -> 제거한다.
+### 수치형 피처
+- 'age'-> MinMaxScaler 사용한다.
+- 'avg_glucose_level' -> standardScaler 사용한다.
+- 'bmi'-> standardScaler 사용한다.
 
 
+## 베이스 라인 구축/하이퍼 파라미터 튜닝을 통한 모델 성능 향상
+### 튜닝 없는 기본 성적
+- 학습에 사용할 모델 : XGBRegressor
+- public = 0.86422, private = 0.89637 
+- **112등**
 
-
-<img width="863" alt="image" src=" ">
-
-<img width="863" alt="image" src=" ">
-
-
-
-
-
-
+### 하이퍼 파라미터 튜닝
+- GridSearchCV, Bayesian Optimization 활용
+	- GridSearchCV와 Bayesian Optimization를 활용하여 찾은 파라미터에서 직접 세부 조정을 통해 성능을 극한으로 끌어올림
+- public = 0.87432, private = 0.89959
+- **6등** // BEST SCORE
 
 
 # 신용카드사기 예측
@@ -306,7 +316,7 @@
 -   Vxx: 28개
 -   Class: 타깃
 
-## -   평가 지표
+## 평가 지표
     
 [area under the ROC curve](http://en.wikipedia.org/wiki/Receiver_operating_characteristic)
 
